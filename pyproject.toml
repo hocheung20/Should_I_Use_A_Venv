@@ -1,0 +1,13 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "Should_I_Use_A_Venv"
+version = "1.0.0"
+dependencies = [
+    "customtkinter",
+]
+
+[project.scripts]
+run-advice = "main:show_message"
