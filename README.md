@@ -12,6 +12,8 @@
 ## Run the installed program
 `run-advice` (see pyproject.toml)
 
+![image](run-advice.png)
+
 ## Package the program
 This generates a dist directory containing a .tar.gz and a .whl
 
