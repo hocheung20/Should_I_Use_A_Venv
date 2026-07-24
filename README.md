@@ -1,5 +1,6 @@
 # Python Build and Packaging
 ## Install
+---
 ### Create and activate a venv named .venv
 `/path/to/python3 -m venv .venv`
 
@@ -15,6 +16,7 @@
 ![image](run-advice.png)
 
 ## Package the program
+---
 This generates a dist directory containing a .tar.gz and a .whl
 
 `python -m build`
