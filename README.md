@@ -1,17 +1,32 @@
-
-
-Create a venv:
+# Python Build and Packaging
+## Install
+### Create and activate a venv named .venv
 `/path/to/python3 -m venv .venv`
 
-Activate that venv:
 `source .venv/bin/activate`
 
-To install:
-`pip install .`
+### Install your Python app
+#### Add -e if you require editable
+`pip install -e .` (see requirements.txt)
 
-OR To install in editable mode:
-`pip install -e .
+## Run the installed program
+`run-advice` (see pyproject.toml)
 
-Run the program (check out run-advice pyproject.toml):
-run-advice
+## Package the program
+This generates a dist directory containing a .tar.gz and a .whl
 
+`python -m build`
+
+The .whl is a self-contained Python program installable in another venv!
+
+`mkdir -p /tmp/should_i_use_a_venv_2`
+
+`cp should_i_use_a_venv*.whl /tmp/should_i_use_a_venv_2`
+
+`cd /tmp/should_i_use_a_venv_2`
+
+`/path/to/python3 -m venv .venv`
+
+`pip install should_i_use_a_venv*.whl`
+
+`run-advice`
